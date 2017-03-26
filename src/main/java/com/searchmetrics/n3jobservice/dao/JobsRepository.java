@@ -4,6 +4,7 @@ import com.searchmetrics.n3jobservice.dto.Job;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
@@ -11,5 +12,6 @@ import java.util.stream.Stream;
  */
 @Repository
 public interface JobsRepository extends CassandraRepository<Job> {
-    Stream<Job> findById(Long crawlId);
+    Optional<Job> findById(Long crawlId);
+    Stream<Job> findAllJobsStream();
 }
