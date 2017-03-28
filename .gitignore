@@ -1,3 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/
-n3jobservice.iml
+/.idea/
+/n3jobservice.iml
+/target/
